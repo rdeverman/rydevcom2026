@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+title: "How this site is built"
+description: "How rydev.com is built: static HTML from Eleventy, no client-side JavaScript, one inlined stylesheet, self-hosted font, WCAG-minded markup and Schema.org structured data."
+permalink: /how-this-site-is-built/
+crumbs:
+  - { name: "How this site is built", url: "/how-this-site-is-built/" }
+---
+<section class="hero">
+  <div class="wrap prose">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol><li><a href="/">Home</a></li><li><span aria-current="page">How this site is built</span></li></ol>
+    </nav>
+    <h1>How this site is built</h1>
+    <p class="lede">A portfolio is also a product. These are the decisions behind this one.</p>
+    <h2>Content first</h2>
+    <p>Every page is plain, semantic HTML generated ahead of time with Eleventy. Everything on it can be read without JavaScript, by people, screen readers, search engines and AI systems alike.</p>
+    <h2>No client-side JavaScript</h2>
+    <p>Nothing on the site needs it, so none ships. The stylesheet is small enough to inline, and there is one self-hosted variable font, Source Serif 4, for headings. Body text uses the system font.</p>
+    <h2>Accessible by default</h2>
+    <p>A logical heading order on every page, landmarks, a skip link, visible focus states, color contrast that meets WCAG AA in light and dark mode, and images with dimensions and alt text.</p>
+    <h2>Structured for search and answers</h2>
+    <p>Each page describes itself with Schema.org data that connects a single Person to the pages, case studies and questions on the site. There’s an XML sitemap, a plain robots.txt, and an <a href="/llms.txt">llms.txt</a> summary for language models.</p>
+    <h2>Evidence over adjectives</h2>
+    <p>Every number on the site names the role it came from. Where a result isn’t measured, the copy says what changed and doesn’t claim a figure.</p>
+  </div>
+</section>

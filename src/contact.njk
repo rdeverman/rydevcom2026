@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+title: "Contact"
+description: "Contact Ryan Deverman about a senior or principal product design, UX or growth product role, or a consulting project. Email, LinkedIn or book a call."
+schemaType: ContactPage
+permalink: /contact/
+crumbs:
+  - { name: "Contact", url: "/contact/" }
+---
+<section class="hero">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol><li><a href="/">Home</a></li><li><span aria-current="page">Contact</span></li></ol>
+    </nav>
+    <h1>Contact</h1>
+    <p class="lede">Tell me about the role or the problem. A few lines on what you’re working on, and what a good outcome looks like, is plenty.</p>
+    <ul class="contact-list" style="margin-top: var(--space-4)">
+      <li><span class="k">Email</span><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      <li><span class="k">Book a call</span><a href="{{ site.calendly }}">Pick a time on Calendly</a></li>
+      <li><span class="k">LinkedIn</span><a href="{{ site.linkedin }}" rel="me">linkedin.com/in/ryan-deverman</a></li>
+      <li><span class="k">Location</span><span>{{ site.location }}. Working remotely.</span></li>
+    </ul>
+  </div>
+</section>

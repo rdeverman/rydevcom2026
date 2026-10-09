@@ -1,0 +1,20 @@
+{
+  "name": "rydevcom2026",
+  "private": true,
+  "description": "Source for rydev.com, the personal site of Ryan Deverman.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/images.mjs && eleventy",
+    "start": "node scripts/images.mjs && eleventy --serve",
+    "gaps": "node scripts/gaps.mjs",
+    "check": "npm run build && node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@fontsource-variable/source-serif-4": "^5.3.0",
+    "sharp": "^0.35.5"
+  }
+}

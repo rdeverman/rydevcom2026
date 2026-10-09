@@ -1,0 +1,93 @@
+---
+layout: layouts/base.njk
+title: "Work with me"
+description: "Hire Ryan Deverman for a senior or principal product design, UX or growth product role, or bring him in as a consultant for self-serve and product-led growth, product UX and design systems, growth websites and programmatic SEO, or design operations."
+schemaType: WebPage
+permalink: /work-with-me/
+crumbs:
+  - { name: "Work with me", url: "/work-with-me/" }
+faq:
+  - q: "What does Ryan Deverman do?"
+    a: "Ryan Deverman is a product designer and growth product manager with 19 years in B2B SaaS. His work spans UX research, product design, design systems, product-led growth, programmatic SEO and growth marketing. As Growth Product Manager at ConstructConnect he scaled a self-serve subscription business to $10M+ ARR."
+  - q: "Is Ryan Deverman open to full-time roles?"
+    a: "Yes. He is looking for senior or principal roles in product design, UX or growth product, and also takes on selected consulting projects."
+  - q: "Where is Ryan Deverman based?"
+    a: "Madison, Wisconsin. He has worked remotely for more than a decade and is set up for remote teams."
+  - q: "What kinds of companies has he worked with?"
+    a: "Mostly B2B software: construction data and bidding software at ConstructConnect and education technology at LiveText, plus nonprofit and community organizations."
+  - q: "How does a consulting engagement start?"
+    a: "With a conversation about the problem you are trying to solve. From there, the work is scoped as an embedded role on your team, a project with a defined outcome, or ongoing advisory sessions."
+---
+<section class="hero">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol><li><a href="/">Home</a></li><li><span aria-current="page">Work with me</span></li></ol>
+    </nav>
+    <h1>Work with me</h1>
+    <p class="lede">I’m looking for a senior or principal role, and I take on a small number of consulting projects. Either way, the work is the same: design that has to move a business number.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="hiring">
+  <div class="wrap prose">
+    <h2 id="hiring">If you’re hiring</h2>
+    <p>I’m a fit for senior or principal roles in product design, UX or growth product, especially where one person needs to connect research, design decisions and the revenue result. I’ve led design work at scale (a team grown from 2 to 12, a 500K+ user platform) and owned growth outcomes as a product manager ($10M+ ARR in self-serve).</p>
+    <p><a href="{{ site.resume }}">Resume (PDF)</a> · <a href="{{ site.linkedin }}">LinkedIn</a> · <a href="/contact/">Contact</a></p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="consulting">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="consulting">Consulting: problems I take on</h2>
+      <p>Each one is something I’ve done in-house, with the evidence linked.</p>
+    </div>
+    <ul class="principles">
+      <li>
+        <h3>Self-serve and product-led growth</h3>
+        <p>Pricing and purchase flows, activation and onboarding, defining product-qualified leads, and the experiment program to prove it works.</p>
+        <p><a href="/work/self-serve-subscriptions/">Evidence: $10M+ ARR self-serve</a></p>
+      </li>
+      <li>
+        <h3>Product UX and design systems</h3>
+        <p>Complex B2B data experiences, component libraries with governance, and accessibility standards that hold across teams.</p>
+        <p><a href="/about/#career">Evidence: design team from 2 to 12</a></p>
+      </li>
+      <li>
+        <h3>Growth websites and programmatic SEO</h3>
+        <p>Content architecture, entity modeling and structured data for search and AI answers, plus CMS migrations that protect conversion.</p>
+        <p><a href="/work/programmatic-seo/">Evidence: 1.7M-page system</a></p>
+      </li>
+      <li>
+        <h3>Design operations</h3>
+        <p>Vendor and agency management, budget governance, tooling selection and the processes that let a design team scale.</p>
+        <p><a href="/about/#career">Evidence: ConstructConnect design org</a></p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="models">
+  <div class="wrap">
+    <div class="section-head"><h2 id="models">How engagements work</h2></div>
+    <ul class="principles">
+      <li><h3>Embedded</h3><p>I join your product or marketing team and own work like a senior hire: standups, roadmap, delivery.</p></li>
+      <li><h3>Project</h3><p>Scoped to one outcome, such as a self-serve redesign or a site migration, with agreed deliverables, timeline and success measures.</p></li>
+      <li><h3>Advisory</h3><p>Regular sessions with your product, design or growth leads, with access between calls.</p></li>
+    </ul>
+    <p style="margin-top: var(--space-3)">{% gap "Availability, typical length or minimums, and rates if you want to state them" %}</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="faq-title">
+  <div class="wrap">
+    <h2 id="faq-title">Common questions</h2>
+    <dl class="faq">
+      {%- for item in faq %}
+      <dt>{{ item.q }}</dt>
+      <dd>{{ item.a }}</dd>
+      {%- endfor %}
+    </dl>
+    <div class="actions"><a class="button button-primary" href="/contact/">Start a conversation</a></div>
+  </div>
+</section>

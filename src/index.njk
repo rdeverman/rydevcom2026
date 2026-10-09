@@ -1,0 +1,120 @@
+---
+layout: layouts/base.njk
+title: "Ryan Deverman · Product design and growth product leadership"
+ogTitle: "Ryan Deverman"
+description: "Ryan Deverman is a product designer and growth product manager in Madison, Wisconsin, with 19 years in B2B SaaS. He scaled a self-serve subscription business to $10M+ ARR and helped grow a design team from 2 to 12."
+schemaType: ProfilePage
+permalink: /
+---
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Product design · Growth product · {{ site.location }}</p>
+    <h1>I design products and stay accountable for the business result.</h1>
+    <p class="lede">I’m Ryan Deverman. For 19 years I’ve worked across UX, product design, product management and growth marketing, mostly in B2B SaaS. At ConstructConnect I moved from senior product design into growth product management, where I made the case for self-serve and scaled it to $10M+ in annual recurring revenue.</p>
+    <p class="status">{{ site.availability }}</p>
+    <div class="actions">
+      <a class="button button-primary" href="/work/">Read the case studies</a>
+      <a class="button button-secondary" href="/work-with-me/">Work with me</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="evidence">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="evidence">The short version</h2>
+      <p>Four results, and the role each came from.</p>
+    </div>
+    <ul class="ledger">
+      <li>
+        <span class="figure">$10M+ ARR</span>
+        <span class="what">Self-serve subscription revenue, after I took the case for product-led growth to the C-suite.</span>
+        <span class="source">Growth Product Manager, ConstructConnect, 2022–2026</span>
+      </li>
+      <li>
+        <span class="figure">1.7M pages</span>
+        <span class="what">Programmatic company and project pages, about 1M of them indexed, structured for search and LLMs.</span>
+        <span class="source">Growth Product Manager, ConstructConnect</span>
+      </li>
+      <li>
+        <span class="figure">2 → 12</span>
+        <span class="what">Designers on the team I helped build, with the design system and accessibility standards behind it.</span>
+        <span class="source">Product design leadership, ConstructConnect, 2013–2022</span>
+      </li>
+      <li>
+        <span class="figure">500K+ users</span>
+        <span class="what">On the construction data platform I designed for as senior product designer.</span>
+        <span class="source">Product design leadership, ConstructConnect, 2013–2022</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="work">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="work">Case studies</h2>
+      <p>What the problem was, what I decided, and what changed.</p>
+    </div>
+    <ol class="work-list">
+      {%- for cs in collections.caseStudies %}
+      <li class="work-item">
+        <a href="{{ cs.url }}">
+          <span class="work-num" aria-hidden="true">{{ "0" + loop.index }}</span>
+          <h3 class="work-title">{{ cs.data.title }}</h3>
+          <p class="work-meta">{{ cs.data.role }} · {{ cs.data.organization }}</p>
+          <p class="work-outcome">{{ cs.data.summary }}</p>
+        </a>
+      </li>
+      {%- endfor %}
+    </ol>
+    <p style="margin-top: var(--space-3)"><a href="/work/">All work, including shorter project notes</a></p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="how">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="how">How I work</h2>
+      <p>Four habits that show up in every project.</p>
+    </div>
+    <ul class="principles">
+      <li>
+        <h3>Decide what better means first</h3>
+        <p>What should change, in behavioral or business terms? That gets answered before design starts, so there is something real to measure after launch.</p>
+      </li>
+      <li>
+        <h3>Smallest test that gives a real signal</h3>
+        <p>Keep fidelity low until the direction holds. A wrong assumption found early is progress, not a setback.</p>
+      </li>
+      <li>
+        <h3>Build systems, not one-offs</h3>
+        <p>Design systems, content architecture and growth infrastructure should make the next decision cheaper, not need rebuilding next quarter.</p>
+      </li>
+      <li>
+        <h3>Close the gaps between teams</h3>
+        <p>Most product problems are coordination problems between product, design, marketing and sales. Having worked in each, I can see the gaps from both sides.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="together">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="together">Two ways to work together</h2>
+    </div>
+    <div class="doors">
+      <div class="door">
+        <h3>Hiring</h3>
+        <p>I’m looking for senior or principal roles in product design, UX or growth product, at companies where design is expected to move a business number.</p>
+        <p><a href="{{ site.resume }}">Resume (PDF)</a> · <a href="{{ site.linkedin }}">LinkedIn</a> · <a href="/about/">Background</a></p>
+      </div>
+      <div class="door">
+        <h3>Consulting</h3>
+        <p>I help software teams with self-serve conversion, product UX and design systems, and websites that have to work as an acquisition channel.</p>
+        <p><a href="/work-with-me/">How engagements work</a> · <a href="/contact/">Get in touch</a></p>
+      </div>
+    </div>
+  </div>
+</section>

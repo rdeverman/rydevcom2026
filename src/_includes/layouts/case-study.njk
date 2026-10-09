@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+---
+<article>
+  <header class="cs-header">
+    <div class="wrap">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/work/">Work</a></li>
+          <li><span aria-current="page">{{ shortTitle }}</span></li>
+        </ol>
+      </nav>
+      <p class="eyebrow">Case study · {{ organization }}</p>
+      <h1>{{ title }}</h1>
+      <p class="lede">{{ summary }}</p>
+      <dl class="facts">
+        {%- for f in facts %}
+        <div><dt>{{ f.k }}</dt><dd>{{ f.v | safe }}</dd></div>
+        {%- endfor %}
+      </dl>
+    </div>
+  </header>
+  <div class="wrap cs-body">
+    <nav class="toc" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ol>
+        {%- for s in sections %}
+        <li><a href="#{{ s.id }}">{{ s.label }}</a></li>
+        {%- endfor %}
+      </ol>
+    </nav>
+    <div class="cs-content">
+      {{ content | safe }}
+      <div class="next">
+        {% if next %}<p>Next case study: <a href="{{ next.url }}">{{ next.title }}</a></p>{% endif %}
+        <p><a href="/work/">All work</a> · <a href="/contact/">Talk about a similar problem</a></p>
+      </div>
+    </div>
+  </div>
+</article>

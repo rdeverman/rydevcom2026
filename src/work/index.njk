@@ -1,0 +1,64 @@
+---
+layout: layouts/base.njk
+title: "Work"
+description: "Case studies and project notes from Ryan Deverman: self-serve subscriptions at $10M+ ARR, a 1.7M-page programmatic SEO system, a web platform migration, a help center rebuild and nonprofit and community websites."
+schemaType: CollectionPage
+permalink: /work/
+---
+<section class="hero">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol><li><a href="/">Home</a></li><li><span aria-current="page">Work</span></li></ol>
+    </nav>
+    <h1>Work</h1>
+    <p class="lede">Two full case studies, then shorter notes on other projects. Each one says what I owned and what changed.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="case-studies" style="padding-top: 0">
+  <div class="wrap">
+    <h2 id="case-studies" class="visually-hidden">Case studies</h2>
+    <ol class="work-list">
+      {%- for cs in collections.caseStudies %}
+      <li class="work-item">
+        <a href="{{ cs.url }}">
+          <span class="work-num" aria-hidden="true">{{ "0" + loop.index }}</span>
+          <h3 class="work-title">{{ cs.data.title }}</h3>
+          <p class="work-meta">{{ cs.data.role }} · {{ cs.data.organization }}</p>
+          <p class="work-outcome">{{ cs.data.summary }}</p>
+        </a>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="notes">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="notes">Project notes</h2>
+      <p>Shorter write-ups. Full case studies to follow where the evidence supports one.</p>
+    </div>
+    <div class="cs-content">
+      <h3 id="web-platform">Corporate web platform migration</h3>
+      <p class="work-meta" style="margin-bottom: .5rem">ConstructConnect · Product platform lead</p>
+      <p>Directed the redesign and migration of the corporate website to a multilingual (French and Spanish) Strapi headless CMS, without dedicated web engineering staff. Conversion protection was the main constraint: high-performing landing pages moved last, each against a parity benchmark, with A/B testing throughout. Accessibility and structured-data standards were set at the start rather than retrofitted.</p>
+      <p>{% gap "Size of the migration, timeline, and whether conversion held or improved" %}</p>
+
+      <h3 id="help-center">Help center modernization</h3>
+      <p class="work-meta" style="margin-bottom: .5rem">ConstructConnect · Project lead</p>
+      <p>Help content ranged from fragmented to missing depending on which legacy product a user started in. I led the migration to Gainsight CC, set up tracking, front-end customization and UX standards, and added interactive product previews that let high-intent visitors qualify themselves before the sign-up wall. Lead quality from MQL to SQL improved.</p>
+      <p>{% gap "MQL-to-SQL change in numbers, and any support deflection figures" %}</p>
+
+      <h3 id="aec-cares">AEC Cares nonprofit platform</h3>
+      <p class="work-meta" style="margin-bottom: .5rem">AEC Cares · Web designer and developer</p>
+      <p>Designed and built a HubSpot CMS site for a national Day-of-Service program, serving volunteers, administrators and donors with very different levels of technical comfort and device access. The CMS was structured so a small non-technical team could maintain it, a deliberate trade against editorial flexibility.</p>
+      <p>{% gap "Engagement, donation and mobile retention figures, and the year" %}</p>
+
+      <h3 id="hill-farms">Hill Farms Neighborhood Association</h3>
+      <p class="work-meta" style="margin-bottom: .5rem">Volunteer Technology Director · 2018 to present</p>
+      <p>Card sorting with residents showed the site was organized around the association’s structure rather than what members came to do. I led a brand refresh and rebuilt the site on Google Cloud around member tasks. Event registrations and newsletter sign-ups increased.</p>
+      <p>{% gap "Registration and newsletter figures before and after" %}</p>
+    </div>
+  </div>
+</section>

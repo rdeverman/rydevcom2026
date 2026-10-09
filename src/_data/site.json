@@ -1,0 +1,19 @@
+{
+  "url": "https://rydev.com",
+  "name": "Ryan Deverman",
+  "lang": "en",
+  "locale": "en_US",
+  "ogImage": "/assets/img/og.png",
+  "resume": "/assets/files/ryan-deverman-resume.pdf",
+  "email": "rdeverman@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/ryan-deverman/",
+  "calendly": "https://calendly.com/rdeverman",
+  "location": "Madison, Wisconsin",
+  "availability": "Open to senior and principal roles in product design, UX and growth product, and to selected consulting projects.",
+  "nav": [
+    { "label": "Work", "url": "/work/" },
+    { "label": "About", "url": "/about/" },
+    { "label": "Work with me", "url": "/work-with-me/" },
+    { "label": "Contact", "url": "/contact/" }
+  ]
+}

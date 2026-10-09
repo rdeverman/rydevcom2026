@@ -1,0 +1,83 @@
+{%- set personId = site.url + "/#person" -%}
+{%- set websiteId = site.url + "/#website" -%}
+{%- set pageUrl = page.url | absoluteUrl(site.url) -%}
+{%- set graph = [
+  {
+    "@type": "WebSite",
+    "@id": websiteId,
+    "url": site.url + "/",
+    "name": site.name,
+    "inLanguage": site.lang,
+    "publisher": { "@id": personId }
+  },
+  {
+    "@type": "Person",
+    "@id": personId,
+    "name": "Ryan Deverman",
+    "url": site.url + "/",
+    "image": site.url + "/assets/img/ryan-deverman-640.jpg",
+    "jobTitle": "Product designer and growth product manager",
+    "description": "Product designer and growth product manager with 19 years in B2B SaaS, working across UX, product design, product management and growth marketing.",
+    "address": { "@type": "PostalAddress", "addressLocality": "Madison", "addressRegion": "WI", "addressCountry": "US" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Ohio University", "sameAs": "https://www.ohio.edu/" },
+    "award": "Charles Logan Smith Award for Excellence in Design, Ohio University, 2007",
+    "knowsAbout": ["Product design", "User experience design", "Product-led growth", "Growth product management", "Design systems", "Programmatic SEO", "Conversion rate optimization", "Web accessibility"],
+    "sameAs": [site.linkedin]
+  }
+] -%}
+{%- set webPage = {
+  "@type": schemaType or "WebPage",
+  "@id": pageUrl + "#webpage",
+  "url": pageUrl,
+  "name": title,
+  "description": description,
+  "isPartOf": { "@id": websiteId },
+  "inLanguage": site.lang
+} -%}
+{%- if schemaType == "ProfilePage" or schemaType == "AboutPage" -%}{%- set webPage = webPage | setAttribute("mainEntity", { "@id": personId }) -%}{%- endif -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {{ graph[0] | json | safe }},
+    {{ graph[1] | json | safe }},
+    {{ webPage | json | safe }}
+    {%- if page.url != "/" and crumbs %},
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" }
+        {%- for c in crumbs %},
+        { "@type": "ListItem", "position": {{ loop.index + 1 }}, "name": {{ c.name | json | safe }}, "item": "{{ c.url | absoluteUrl(site.url) }}" }
+        {%- endfor %}
+      ]
+    }
+    {%- endif %}
+    {%- if article %},
+    {
+      "@type": "Article",
+      "@id": "{{ pageUrl }}#article",
+      "headline": {{ title | json | safe }},
+      "description": {{ description | json | safe }},
+      "author": { "@id": "{{ personId }}" },
+      "publisher": { "@id": "{{ personId }}" },
+      "mainEntityOfPage": { "@id": "{{ pageUrl }}#webpage" },
+      "about": {{ article.about | json | safe }},
+      "mentions": [{ "@type": "Organization", "name": {{ article.organization | json | safe }} }],
+      "inLanguage": "{{ site.lang }}"
+    }
+    {%- endif %}
+    {%- if faq %},
+    {
+      "@type": "FAQPage",
+      "@id": "{{ pageUrl }}#faq",
+      "mainEntity": [
+        {%- for q in faq %}
+        { "@type": "Question", "name": {{ q.q | json | safe }}, "acceptedAnswer": { "@type": "Answer", "text": {{ q.a | json | safe }} } }{% if not loop.last %},{% endif %}
+        {%- endfor %}
+      ]
+    }
+    {%- endif %}
+  ]
+}
+</script>
