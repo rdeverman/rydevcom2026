@@ -22,7 +22,17 @@
     "alumniOf": { "@type": "CollegeOrUniversity", "name": "Ohio University", "sameAs": "https://www.ohio.edu/" },
     "award": "Charles Logan Smith Award for Excellence in Design, Ohio University, 2007",
     "knowsAbout": ["Product design", "User experience design", "Product-led growth", "Growth product management", "Design systems", "Programmatic SEO", "Conversion rate optimization", "Web accessibility"],
-    "sameAs": [site.linkedin]
+    "sameAs": [site.linkedin],
+    "worksFor": { "@id": site.url + "/#studio" }
+  },
+  {
+    "@type": "ProfessionalService",
+    "@id": site.url + "/#studio",
+    "name": site.studio,
+    "url": site.url + "/work-with-me/",
+    "description": "Product strategy, product design and UX, growth, conversion and analytics consulting for software teams.",
+    "founder": { "@id": personId },
+    "address": { "@type": "PostalAddress", "addressLocality": "Madison", "addressRegion": "WI", "addressCountry": "US" }
   }
 ] -%}
 {%- set webPage = {
@@ -41,6 +51,7 @@
   "@graph": [
     {{ graph[0] | json | safe }},
     {{ graph[1] | json | safe }},
+    {{ graph[2] | json | safe }},
     {{ webPage | json | safe }}
     {%- if page.url != "/" and crumbs %},
     {

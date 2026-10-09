@@ -8,7 +8,7 @@ shortTitle: "Self-serve subscriptions"
 description: "How Ryan Deverman, as Growth Product Manager at ConstructConnect, built the business case for product-led growth and the self-serve subscription experience that scaled to $10M+ ARR."
 role: "Growth Product Manager"
 organization: "ConstructConnect"
-summary: "Every new subscription depended on a sales conversation. I built the case for a self-serve motion, got it resourced by the C-suite, and designed and ran the subscription experience that grew to $10M+ ARR."
+summary: "Growth depended on sales conversations, and the self-serve channel was at zero revenue. I built the case for product-led growth, answered the C-suite's fear that self-serve customers would churn, and designed and ran the subscription experience that grew to $10M+ ARR."
 article:
   organization: "ConstructConnect"
   about: ["Product-led growth", "Self-serve subscriptions", "Activation design", "Pricing and packaging"]
@@ -17,10 +17,10 @@ crumbs:
   - { name: "Self-serve subscriptions", url: "/work/self-serve-subscriptions/" }
 facts:
   - { k: "Company", v: "ConstructConnect, B2B construction data and bidding software" }
-  - { k: "My role", v: "Growth Product Manager. Senior individual contributor with ownership of experience, funnel and revenue outcomes" }
-  - { k: "When", v: "Nov 2022 – Jan 2026 <mark class=\"gap\" data-gap>Gap: did the self-serve work start before the PM role?</mark>" }
-  - { k: "Team", v: "<mark class=\"gap\" data-gap>Gap: who you worked with (engineering, analytics, CS, sales) and team size</mark>" }
-  - { k: "Result", v: "$10M+ ARR in self-serve revenue" }
+  - { k: "My role", v: "Senior UX/UI Designer when the work began, with product and growth responsibilities growing; Growth Product Manager from Nov 2022. Ownership of experience, funnel and revenue outcomes" }
+  - { k: "When", v: "Work began in 2021; launched 2023. Ran it through Jan 2026" }
+  - { k: "Team", v: "In-house engineering for the API work, Netfluence (agency) for HubSpot. I coordinated across the business" }
+  - { k: "Result", v: "$0 to $10M+ ARR in the self-serve channel" }
 sections:
   - { id: "situation", label: "The situation" }
   - { id: "owned", label: "What I owned" }
@@ -38,7 +38,7 @@ next:
 
 ConstructConnect makes construction project data and bidding software. For most of its history, growth ran through sales: every new subscription needed a conversation with a rep. That caps growth at the size of the sales team.
 
-There was no self-serve way to buy. The web properties and journeys that did exist were fragmented, which added cost and friction to every acquisition path. Research showed where buyer intent was highest and confidence was lowest. That gap became the brief.
+A first self-serve version had existed since 2013, but the channel was producing no recurring revenue. The web properties and journeys around it were fragmented, which added cost and friction to every acquisition path. Research showed where buyer intent was highest and confidence was lowest. That gap became the brief.
 
 <h2 id="owned">What I owned</h2>
 
@@ -58,9 +58,9 @@ To find it, I combined behavioral analytics from Pendo, Gainsight PX and Hotjar 
 <h2 id="decisions">Key decisions</h2>
 
 <div class="decision">
-<h3>One adaptive flow instead of a flow per entry point</h3>
-<p>I designed a single self-serve subscription flow that adapts to entry point, fluency level and firmographic segment, rather than separate flows for each path in. It was the first test of whether one flow could do what a sales conversation used to.</p>
-<p><span class="label">Trade-off</span> {% gap "What you gave up by not building separate flows, and what alternatives you considered" %}</p>
+<h3>One adaptive flow, built inside existing constraints</h3>
+<p>I designed a single self-serve subscription flow that adapts to entry point, fluency level and firmographic segment. It was the first test of whether one flow could do what a sales conversation used to.</p>
+<p><span class="label">Trade-off</span> We were limited by the existing payment flow. The product had to be built into the company’s proprietary system so it could work with minimal back-end changes. That was far from ideal: we wanted a more adaptive product with more options for buyers, and accepted the constraint to ship.</p>
 </div>
 
 <div class="decision">
@@ -76,7 +76,7 @@ To find it, I combined behavioral analytics from Pendo, Gainsight PX and Hotjar 
 <div class="decision">
 <h3>Let behavior shape pricing and packaging</h3>
 <p>Behavioral evidence fed tier structure and feature-gating decisions, which affected conversion directly.</p>
-<p><span class="label">Example</span> {% gap "One specific pricing or gating change and what it did" %}</p>
+<p><span class="label">Example</span> Before, buyers couldn’t see what they would pay. We introduced dynamic pricing that updated as they chose payment terms and markets. Abandonment dropped significantly compared with no price transparency.</p>
 </div>
 
 <div class="decision">
@@ -88,21 +88,20 @@ To find it, I combined behavioral analytics from Pendo, Gainsight PX and Hotjar 
 
 I built and presented the case for the shift from sales-led to product-led growth to VP and C-suite leadership. It was accepted and resourced.
 
-{% gap "What the case argued, the objection you had to answer, and what was committed (people, budget, timeline)" %}
+Leadership had two fears: that self-serve customers would cancel at a high rate, and that the traditional sales channel would be abandoned. Neither happened. Self-serve customers retained at 60%, against 50% for sales-led customers, and the sales channel kept its role. Once the data showed that, the objections faded.
 
 <h2 id="results">Results</h2>
 
 <table class="result-table">
   <thead><tr><th scope="col">Measure</th><th scope="col">What changed</th></tr></thead>
   <tbody>
-    <tr><td>$10M+ ARR</td><td>Self-serve subscription revenue. {% gap "Starting point and how long it took" %}</td></tr>
-    <tr><td>CAC</td><td>Reduced by consolidating fragmented web properties into one conversion architecture. {% gap "By how much" %}</td></tr>
-    <tr><td>PQL conversion</td><td>Improved. {% gap "Before and after rate" %}</td></tr>
+    <tr><td>$0 → $10M+</td><td>Annual recurring revenue in the self-serve channel.</td></tr>
+    <tr><td>60% retention</td><td>Self-serve retention, against 50% for sales-led customers.</td></tr>
+    <tr><td>CAC</td><td>Under the sales-led model, acquiring a small-business customer cost almost as much as their subscription. Making those customers profitable to acquire was the point of self-serve.</td></tr>
+    <tr><td>Abandonment</td><td>Dropped significantly after pricing became transparent and dynamic.</td></tr>
   </tbody>
 </table>
 
 <h2 id="learned">What I learned</h2>
 
 A tested behavioral threshold beats an onboarding pattern borrowed from somewhere else. And measurement has to be in place before the redesign, or you can’t tell whether the redesign worked.
-
-{% gap "Something that didn't work, or what you would do differently" %}
