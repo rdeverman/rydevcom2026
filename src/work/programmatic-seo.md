@@ -8,7 +8,7 @@ shortTitle: "Programmatic SEO"
 description: "How Ryan Deverman designed the taxonomy, entity model and governance behind 1.7M programmatic company and project pages at ConstructConnect, about 1M of them indexed, structured for both search engines and LLMs."
 role: "Growth Product Manager"
 organization: "ConstructConnect"
-summary: "The market had far more contractors, companies and projects than any team could write about by hand. I owned the strategy and delivery of an API-powered page system that scaled to 1.7M pages, about 1M of them indexed."
+summary: "ConstructConnect’s data was locked behind the product, and the market was far too large to cover by hand. I owned the strategy and delivery of an API-powered page system that scaled to 1.7M pages, about 1M of them indexed, as an entry point into the self-serve product."
 article:
   organization: "ConstructConnect"
   about: ["Programmatic SEO", "Information architecture", "Entity modeling", "AI search optimization", "HubSpot CMS"]
@@ -18,7 +18,7 @@ crumbs:
 facts:
   - { k: "Company", v: "ConstructConnect, B2B construction data and bidding software" }
   - { k: "My role", v: "Growth Product Manager. Owned strategy, delivery and performance reporting" }
-  - { k: "When", v: "<mark class=\"gap\" data-gap>Gap: start and end dates</mark>" }
+  - { k: "When", v: "First pages live in early 2023" }
   - { k: "Platform", v: "HubSpot CMS, fed by the product’s data through an API" }
   - { k: "Scale", v: "1.7M pages, about 1M indexed, 87 audience personas" }
 sections:
@@ -61,9 +61,9 @@ The hypothesis: a taxonomy-driven, entity-modeled architecture would let the sys
 </div>
 
 <div class="decision">
-<h3>Pilot small, then scale</h3>
-<p>Templates were validated in small batches before scaling, to test whether the architecture held before committing to the full build.</p>
-<p><span class="label">What the pilot showed</span> {% gap "What you learned in the pilot and what changed before scaling" %}</p>
+<h3>Pilot small, then improve quality before scaling</h3>
+<p>The pilot validated programmatic content as a way to make ConstructConnect’s data discoverable through organic search and to create entry points into the self-serve product. It also confirmed that SEO had to connect search intent, local market information, product value and conversion paths, rather than run as a standalone traffic project.</p>
+<p><span class="label">What changed before scaling</span> We improved the taxonomy, page templates, relevance, internal linking, structured data, and the paths from discovery into Project Intelligence. The goal was to scale useful landing pages, not to generate more URLs.</p>
 </div>
 
 <div class="decision">
@@ -73,8 +73,7 @@ The hypothesis: a taxonomy-driven, entity-modeled architecture would let the sys
 
 <div class="decision">
 <h3>Add localized market reports</h3>
-<p>The market-report framework came later, in response to an unmet need, and became one of the strongest-performing parts of the system.</p>
-<p><span class="label">Evidence</span> {% gap "How it outperformed: traffic, engagement or conversion figures" %}</p>
+<p>The market-report framework came later, in response to an unmet need, and became one of the strongest-performing organic surfaces in the system. Reports matched specific geographic and construction-market interests, which gave visitors a more relevant way in than generic product or category pages.</p>
 </div>
 
 <h2 id="results">Results</h2>
@@ -83,9 +82,9 @@ The hypothesis: a taxonomy-driven, entity-modeled architecture would let the sys
   <thead><tr><th scope="col">Measure</th><th scope="col">What changed</th></tr></thead>
   <tbody>
     <tr><td>1.7M</td><td>Programmatic company and project pages published.</td></tr>
-    <tr><td>~1M</td><td>Pages indexed. {% gap "Why the other ~0.7M weren't, and whether that was intended" %}</td></tr>
+    <tr><td>~1M</td><td>Pages indexed.</td></tr>
     <tr><td>87</td><td>Audience personas behind the localized market reports.</td></tr>
-    <tr><td>Acquisition</td><td>{% gap "Organic traffic, sign-ups, pipeline or revenue attributed to these pages" %}</td></tr>
+    <tr><td>Acquisition</td><td>A large organic discovery surface supporting the product-led growth strategy, as the self-serve business grew past $10M ARR. That is a company-level result: revenue attributable to these pages alone isn’t claimed here.</td></tr>
   </tbody>
 </table>
 
@@ -93,4 +92,4 @@ The hypothesis: a taxonomy-driven, entity-modeled architecture would let the sys
 
 Machine readability and clarity for people are the same design problem stated two ways. Solve one without the other and the system only works for half its audience.
 
-{% gap "Something that didn't work, or what you would do differently" %}
+What I’d do differently: measure page quality and downstream conversion from the first pilot. At this scale, the number of pages published or indexed says little about success. I would set performance tiers for page types, connect organic landing-page cohorts to sign-up and activation, use that to decide which templates to grow, and make indexation and content-quality monitoring part of the operating model from day one.

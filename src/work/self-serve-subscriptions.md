@@ -17,7 +17,7 @@ crumbs:
   - { name: "Self-serve subscriptions", url: "/work/self-serve-subscriptions/" }
 facts:
   - { k: "Company", v: "ConstructConnect, B2B construction data and bidding software" }
-  - { k: "My role", v: "Growth Product Manager from Nov 2022. Senior individual contributor with ownership of experience, funnel and revenue outcomes <mark class=\"gap\" data-gap>Gap: your role when the work began in 2021</mark>" }
+  - { k: "My role", v: "Senior UX/UI Designer when the work began, with product and growth responsibilities growing; Growth Product Manager from Nov 2022. Ownership of experience, funnel and revenue outcomes" }
   - { k: "When", v: "Work began in 2021; launched 2023. Ran it through Jan 2026" }
   - { k: "Team", v: "In-house engineering for the API work, Netfluence (agency) for HubSpot. I coordinated across the business" }
   - { k: "Result", v: "$0 to $10M+ ARR in the self-serve channel" }
