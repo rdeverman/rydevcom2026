@@ -9,7 +9,8 @@
   "linkedin": "https://www.linkedin.com/in/ryan-deverman/",
   "calendly": "https://calendly.com/rdeverman",
   "location": "Madison, Wisconsin",
-  "availability": "Open to senior and principal roles in product design, UX and growth product, and to selected consulting projects.",
+  "availability": "Consulting now through RyDev Studio. Open to senior and principal roles in product design, UX and growth product.",
+  "studio": "RyDev Studio",
   "nav": [
     { "label": "Work", "url": "/work/" },
     { "label": "About", "url": "/about/" },
