@@ -41,4 +41,15 @@ Every number names the role it came from. Nothing is published that isn't backed
 
 ## Deploying
 
-Built for any static host. `_headers` and `_redirects` use the Cloudflare Pages / Netlify format and redirect the old `.html` URLs to the new ones. Build command `npm run build`, output directory `_site`.
+rydev.com is hosted on NixiHost (Apache, cPanel), with Cloudflare in front. `src/static/.htaccess` is copied to the site root and handles the 404 page, security headers, caching, and 301 redirects from the old `.html` URLs.
+
+**From GitHub (recommended):** Actions → "Deploy to NixiHost" → Run workflow. It builds, runs `npm run check` (so a broken link stops the deploy), and uploads `_site/` over FTPS. One-time setup in Settings → Secrets and variables → Actions:
+
+- Secrets: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD` (a cPanel FTP account)
+- Variable (optional): `FTP_SERVER_DIR`, defaults to `public_html/`
+
+**By hand:** `npm run build`, then upload the contents of `_site/`, including the hidden `.htaccess`, to `public_html/` with cPanel File Manager or an FTP client.
+
+Files from the old site that stay on the server are harmless: the old page URLs redirect to the new ones.
+
+`.github/workflows/build.yml` builds every pull request and lists any gap markers.

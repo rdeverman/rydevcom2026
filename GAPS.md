@@ -4,7 +4,7 @@ Required:
 
 - [ ] Resume PDF: add the current file at `src/assets/files/ryan-deverman-resume.pdf` (`npm run check` flags it until then).
 - [ ] Positioning: confirm a single personal brand, and whether "RyDev Studio" should appear as the name of the consulting practice.
-- [ ] Hosting: confirm where rydev.com is deployed so `_headers` and `_redirects` take effect.
+- [ ] Deploy: add the FTP secrets in GitHub (see README), or upload `_site/` by hand.
 
 Numbers to add when confirmed (the copy is accurate without them):
 
